@@ -34,9 +34,9 @@ static void chip8ExecExtendedEight(struct chip8* chip8, unsigned short opcode)
 {
     unsigned char x = (opcode >> 8) & 0x000f;
     unsigned char y = (opcode >> 4) & 0x000f;
-    unsigned char final_four_bits = opcode & 0x000f;
+    unsigned char finalFourBits = opcode & 0x000f;
     unsigned short tmp = 0;
-    switch(final_four_bits)
+    switch(finalFourBits)
     {
         // 8xy0 - LD Vx, Vy. Vx = Vy
         case 0x00:
@@ -100,8 +100,8 @@ static char chip8WaitForKeyPress(struct chip8* chip8)
     {
         if(event.type != SDL_KEYDOWN) continue;
         char c = event.key.keysym.sym;
-        char chip8_key = chip8KeyboardMap(&chip8->keyboard, c);
-        if(chip8_key != -1) return chip8_key;
+        char chip8Key = chip8KeyboardMap(&chip8->keyboard, c);
+        if(chip8Key != -1) return chip8Key;
     }
     return -1;
 }
@@ -118,11 +118,9 @@ static void chip8ExecExtendedF(struct chip8* chip8, unsigned short opcode)
 
         // fx0a - LD Vx, K
         case 0x0A:
-        {
-            char pressed_key = chip8WaitForKeyPress(chip8);
-            chip8->registers.V[x] = pressed_key;
-        }
-        break; 
+            {char pressedKey = chip8WaitForKeyPress(chip8);
+            chip8->registers.V[x] = pressedKey;}
+            break; 
 
         // fx15 - LD DT, Vx, set the delay timer to Vx
         case 0x15:
@@ -158,23 +156,19 @@ static void chip8ExecExtendedF(struct chip8* chip8, unsigned short opcode)
 
         // fx55 - LD [I], Vx
         case 0x55:
-        {
-            for (int i = 0; i <= x; i++)
+            {for (int i = 0; i <= x; i++)
             {
                 chip8MemorySet(&chip8->memory, chip8->registers.I+i, chip8->registers.V[i]);
-            }
-        }
-        break;
+            }}
+            break;
 
         // fx65 - LD Vx, [I]
         case 0x65:
-        {
-            for (int i = 0; i <= x; i++)
+            {for (int i = 0; i <= x; i++)
             {
                 chip8->registers.V[i] = chip8MemoryGet(&chip8->memory, chip8->registers.I+i);
-            }
-        }
-        break;
+            }}
+            break;
     }
 }
 
@@ -276,9 +270,11 @@ static void chip8ExecExtended(struct chip8 *chip8, unsigned short opcode) {
 
 void chip8Exec(struct chip8 *chip8, unsigned short opcode) {
     switch(opcode) {
+        // CLS - clear display
         case 0x00E0:
             chip8ScreenClear(&chip8->screen);
             break;
+        // RET - return from subroutine
         case 0x00EE:
             chip8->registers.programCounter = chip8StackPop(chip8);
             break;
