@@ -19,3 +19,7 @@ CHIP-8 emulator written in C and using the SDL2 library.
 | A  | 0  | B  | F  |
 
 ## SCREENSHOTS
+### SPACE INVADERS
+![invaders](https://user-images.githubusercontent.com/61395703/170269121-64a136e5-a479-4944-9857-acb08998b749.png)
+### TETRIS
+![tetris](https://user-images.githubusercontent.com/61395703/170268833-60167ff8-3d6b-4257-b36c-90c15267b9e4.png)
