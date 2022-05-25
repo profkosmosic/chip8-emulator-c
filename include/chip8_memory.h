@@ -9,5 +9,6 @@ struct chip8Memory {
 
 void chip8MemorySet(struct chip8Memory *memory, int index, unsigned char val);
 unsigned char chip8MemoryGet(struct chip8Memory *memory, int index);
+unsigned short chip8MemoryGetShort(struct chip8Memory *memory, int index);
 
 #endif

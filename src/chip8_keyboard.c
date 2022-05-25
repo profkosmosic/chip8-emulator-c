@@ -1,15 +1,17 @@
 #include "chip8_keyboard.h"
 #include <assert.h>
 
+void chip8KeyboardSetMap(struct chip8Keyboard* keyboard, const char* map) {
+    keyboard->keyboardMap = map;
+}
+
 static void chip8KeyboardInBounds(int key) {
     assert(key >= 0 && key < CHIP8_KEYS);
 }
 
-int chip8KeyboardMap(const char *map, char key) {
+int chip8KeyboardMap(struct chip8Keyboard *keyboard, char key) {
     for(int i = 0; i < CHIP8_KEYS; i++) {
-        if(map[i] == key) {
-            return i;
-        }
+        if(keyboard->keyboardMap[i] == key) return i;
     }
     return -1;
 }

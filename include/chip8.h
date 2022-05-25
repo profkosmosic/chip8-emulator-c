@@ -1,6 +1,7 @@
 #ifndef CHIP8_H
 #define CHIP8_H
 
+#include <stddef.h>
 #include "config.h"
 #include "chip8_memory.h"
 #include "chip8_registers.h"
@@ -17,5 +18,7 @@ struct chip8 {
 };
 
 void chip8Init(struct chip8 *chip8);
+void chip8Exec(struct chip8 *chip8, unsigned short opcode);
+void chip8Load(struct chip8 *chip8, const char *buffer, size_t size);
 
 #endif

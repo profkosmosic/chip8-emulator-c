@@ -11,5 +11,6 @@ struct chip8Screen {
 void chip8ScreenSet(struct chip8Screen *screen, int x, int y);
 bool chip8ScreenIsSet(struct chip8Screen *screen, int x, int y);
 bool chip8ScreenDrawSprite(struct chip8Screen *screen, int x, int y, const char *sprite, int num);
+void chip8ScreenClear(struct chip8Screen *screen);
 
 #endif

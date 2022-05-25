@@ -1,5 +1,6 @@
 #include "chip8_screen.h"
 #include <assert.h>
+#include <memory.h>
 
 static void chip8ScreenInBounds(int x, int y) {
     assert(x >= 0 && x < CHIP8_WIDTH && y >= 0 && y < CHIP8_HEIGHT);
@@ -26,4 +27,8 @@ bool chip8ScreenDrawSprite(struct chip8Screen *screen, int x, int y, const char 
         }
     }
     return pixelHit;
+}
+
+void chip8ScreenClear(struct chip8Screen *screen) {
+    memset(screen->screenPixels, 0, sizeof(screen->screenPixels));
 }
