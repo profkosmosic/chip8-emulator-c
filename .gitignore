@@ -1,7 +1,0 @@
-*.exe
-*.o
-bin/*
-build/*
-c8games/*
-include/SDL2/*
-lib/*
