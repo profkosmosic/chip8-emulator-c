@@ -23,3 +23,7 @@ CHIP-8 emulator written in C and using the SDL2 library.
 ![invaders](https://user-images.githubusercontent.com/61395703/170269121-64a136e5-a479-4944-9857-acb08998b749.png)
 ### TETRIS
 ![tetris](https://user-images.githubusercontent.com/61395703/170268833-60167ff8-3d6b-4257-b36c-90c15267b9e4.png)
+
+## SOURCES
+Cowgod's CHIP-8 technical reference: http://devernay.free.fr/hacks/chip8/C8TECH10.HTM
+Daniel McCarthy's CHIP-8 in C course
