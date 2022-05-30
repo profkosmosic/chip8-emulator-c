@@ -1,6 +1,8 @@
 # CHIP-8 EMULATOR
 CHIP-8 emulator written in C and using the SDL2 library.
 
+You can learn more about the CHIP-8 here: https://en.wikipedia.org/wiki/CHIP-8
+
 The emulator has only been tested on Windows so far but I do plan on porting it over to macOS and Linux at some point as well.
 
 ## INSTALLATION INSTRUCTIONS
