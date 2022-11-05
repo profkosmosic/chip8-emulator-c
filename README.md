@@ -3,8 +3,8 @@ CHIP-8 emulator written in C and using the SDL2 library.<br/>
 You can learn more about the CHIP-8 here: https://en.wikipedia.org/wiki/CHIP-8<br/>
 The emulator has only been tested on Windows so far but I do plan on porting it over to macOS and Linux at some point as well.
 ## INSTALLATION INSTRUCTIONS
-- You'll need to download and set up **MinGW** if you haven't already: https://sourceforge.net/projects/mingw-w64/files/
-- Download the **SDL2 Development Library(MinGW32)**: https://www.libsdl.org/download-2.0.php and unzip it.
+- You'll need to download and set up <a href="https://sourceforge.net/projects/mingw-w64/files/">**MinGW**</a> if you haven't already.
+- Download the <a href="https://github.com/libsdl-org/SDL/releases/tag/release-2.24.2">**SDL2 Development Library(MinGW32)**</a> and unzip it.
 - Copy the **/bin/** and **/lib/** folders from **/x86_64-w64-mingw32/** into the project root directory.
 - Copy the **/SDL2/** folder that is inside the **/include/** directory into the project's **/include/** directory.
 - Make a folder called **/build/** inside the project root.
