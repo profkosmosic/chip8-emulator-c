@@ -9,7 +9,7 @@ The emulator has only been tested on Windows so far but I do plan on porting it 
 - Copy the **/SDL2/** folder that is inside the **/include/** directory into the project's **/include/** directory.
 - Make a folder called **/build/** inside the project root.
 - Compile the project from the command line using the line **mingw32-make**.
-- All done! You can run the emulator by dragging and dropping a ROM file onto main.exe which is now inside the /bin/ folder or you can run it from the command line and include the ROM file path as a 2nd argument on launch.
+- All done! You can run the emulator by dragging and dropping a ROM file onto **main.exe** which is now inside the **/bin/** folder or you can run it from the command line and include the ROM file path as a 2nd argument on launch.
 ## KEYBOARD LAYOUT
 
 | 1  | 2 | 3  | C |
